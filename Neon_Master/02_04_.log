@@ -1,0 +1,76 @@
+LOG : 22:51:55  ----  Opened database successfully
+ERR : 22:51:55  ----  Error while trying to select object of type 'org.neon.master.db.orm.Catchphrase'!
+ERR : 22:51:55  ----  Exception SQLiteException caught at org.neon.master.db.DatabaseManager @ getWhere ln:103
+ERR : 22:51:55  ----  Exception message: [SQLITE_ERROR] SQL error or missing database (no such table: CATCHPHRASE)
+LOG : 22:52:20  ----  Opened database successfully
+ERR : 22:52:20  ----  Error while trying to select object of type 'org.neon.master.db.orm.Catchphrase'!
+ERR : 22:52:20  ----  Exception SQLiteException caught at org.neon.master.db.DatabaseManager @ getWhere ln:103
+ERR : 22:52:20  ----  Exception message: [SQLITE_ERROR] SQL error or missing database (no such table: CATCHPHRASE)
+LOG : 22:52:41  ----  Opened database successfully
+ERR : 22:52:41  ----  Error while trying to select object of type 'org.neon.master.db.orm.Catchphrase'!
+ERR : 22:52:41  ----  Exception SQLiteException caught at org.neon.master.db.DatabaseManager @ getWhere ln:103
+ERR : 22:52:41  ----  Exception message: [SQLITE_ERROR] SQL error or missing database (no such table: CATCHPHRASE)
+LOG : 22:55:36  ----  Opened database successfully
+LOG : 22:56:01  ----  Opened database successfully
+ERR : 22:56:01  ----  Error while trying to select object of type 'org.neon.master.db.orm.Catchphrase'!
+ERR : 22:56:01  ----  Exception SQLiteException caught at org.neon.master.db.DatabaseManager @ getWhere ln:104
+ERR : 22:56:01  ----  Exception message: [SQLITE_ERROR] SQL error or missing database (no such table: CATCHPHRASE)
+LOG : 22:59:05  ----  Opened database successfully
+LOG : 22:59:05  ----  Executing DB query 'SELECT * FROM CATCHPHRASE;'...
+ERR : 22:59:05  ----  Error while trying to select object of type 'org.neon.master.db.orm.Catchphrase'!
+ERR : 22:59:05  ----  Exception SQLiteException caught at org.neon.master.db.DatabaseManager @ getWhere ln:105
+ERR : 22:59:05  ----  Exception message: [SQLITE_ERROR] SQL error or missing database (no such table: CATCHPHRASE)
+LOG : 23:01:07  ----  Opened database successfully
+LOG : 23:01:07  ----  Executing DB query 'SELECT * FROM CATCHPHRASE;'...
+LOG : 23:01:28  ----  Opened database successfully
+LOG : 23:01:28  ----  Executing DB query 'SELECT * FROM CATCHPHRASE;'...
+LOG : 23:02:08  ----  Opened database successfully
+LOG : 23:02:08  ----  Executing DB query 'SELECT * FROM CATCHPHRASE;'...
+LOG : 23:02:54  ----  Opened database successfully
+LOG : 23:02:54  ----  Executing DB query 'SELECT * FROM CATCHPHRASE;'...
+LOG : 23:05:52  ----  Opened database successfully
+LOG : 23:05:52  ----  Executing DB query 'SELECT * FROM CATCHPHRASE;'...
+LOG : 23:23:37  ----  Opened database successfully
+LOG : 23:23:37  ----  Executing DB query 'SELECT * FROM CATCHPHRASE;'...
+LOG : 23:30:13  ----  Opened database successfully
+LOG : 23:30:13  ----  Executing DB query 'SELECT (ID, TEXT, SQL_PLACEHOLDER_TABLE_NAME, SQL_PLACEHOLDER_VALUE_LIST, SQL_PLACEHOLDER_FIELD_LIST, SQL_PLACEHOLDER_LIST_DELIMITER, SQL_END, SQL_FROM, SQL_INTO, SQL_INSERT, SQL_SELECT, SQL_VALUES, SQL_UPDATE, SQL_WHERE)FROM CATCHPHRASE;'...
+ERR : 23:30:13  ----  Error while trying to select object of type 'org.neon.master.db.orm.Catchphrase'!
+ERR : 23:30:13  ----  Exception SQLiteException caught at org.neon.master.db.orm.model.AbstractDatabaseModel @ get ln:135
+ERR : 23:30:13  ----  Exception message: [SQLITE_ERROR] SQL error or missing database (no such column: SQL_PLACEHOLDER_TABLE_NAME)
+LOG : 23:33:34  ----  Opened database successfully
+LOG : 23:33:34  ----  Executing DB query 'SELECT (ID, TEXT)FROM CATCHPHRASE;'...
+ERR : 23:33:34  ----  Error while trying to select object of type 'org.neon.master.db.orm.Catchphrase'!
+ERR : 23:33:34  ----  Exception SQLiteException caught at org.neon.master.db.orm.model.AbstractDatabaseModel @ get ln:135
+ERR : 23:33:34  ----  Exception message: [SQLITE_ERROR] SQL error or missing database (row value misused)
+LOG : 23:35:31  ----  Opened database successfully
+LOG : 23:35:31  ----  Executing DB query 'SELECT ID, TEXT FROM CATCHPHRASE;'...
+LOG : 23:35:47  ----  Opened database successfully
+LOG : 23:35:57  ----  Executing DB query 'SELECT ID, TEXT FROM CATCHPHRASE;'...
+LOG : 23:36:21  ----  Opened database successfully
+LOG : 23:36:21  ----  Executing DB query 'SELECT ID, TEXT FROM CATCHPHRASE;'...
+LOG : 23:39:14  ----  Opened database successfully
+LOG : 23:39:16  ----  Executing DB query 'SELECT ID, TEXT FROM CATCHPHRASE;'...
+LOG : 23:40:34  ----  Opened database successfully
+LOG : 23:40:34  ----  Executing DB query 'SELECT ID, TEXT FROM CATCHPHRASE;'...
+ERR : 23:40:34  ----  Error while trying to select object of type 'org.neon.master.db.orm.Catchphrase'!
+ERR : 23:40:34  ----  Exception InstantiationException caught at org.neon.master.db.orm.model.AbstractDatabaseModel @ get ln:135
+ERR : 23:40:34  ----  Exception message: org.neon.master.db.orm.Catchphrase
+ERR : 23:40:34  ----  Cause: NoSuchMethodException - java.lang.Class @ getConstructor0 ln:3082
+LOG : 23:41:50  ----  Opened database successfully
+LOG : 23:41:50  ----  Executing DB query 'SELECT ID, TEXT FROM CATCHPHRASE;'...
+LOG : 23:42:02  ----  Opened database successfully
+LOG : 23:42:11  ----  Executing DB query 'SELECT ID, TEXT FROM CATCHPHRASE;'...
+LOG : 23:43:00  ----  Opened database successfully
+LOG : 23:43:00  ----  Executing DB query 'SELECT ID, TEXT FROM CATCHPHRASE;'...
+LOG : 23:43:09  ----  Executing DB query 'SELECT ID, TEXT FROM CATCHPHRASE;'...
+LOG : 23:49:54  ----  Opened database successfully
+LOG : 23:49:54  ----  Executing DB query 'SELECT ID, TEXT FROM CATCHPHRASE;'...
+LOG : 23:50:16  ----  Opened database successfully
+LOG : 23:50:16  ----  Executing DB query 'SELECT ID, TEXT FROM CATCHPHRASE;'...
+ERR : 23:50:16  ----  Error while trying to select object of type 'org.neon.master.db.orm.Catchphrase'!
+ERR : 23:50:16  ----  Exception InstantiationException caught at org.neon.master.db.orm.model.AbstractDatabaseModel @ get ln:135
+ERR : 23:50:16  ----  Exception message: org.neon.master.db.orm.Catchphrase
+ERR : 23:50:16  ----  Cause: NoSuchMethodException - java.lang.Class @ getConstructor0 ln:3082
+LOG : 23:52:05  ----  Opened database successfully
+LOG : 23:52:05  ----  Executing DB query 'SELECT ID, TEXT FROM CATCHPHRASE;'...
+LOG : 23:52:05  ----  Executing DB query 'SELECT ID, ICON_PATH FROM USER_ICON;'...
