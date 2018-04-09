@@ -8,7 +8,6 @@ package org.neon.master.db.orm.model;
 import java.lang.reflect.Field;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import org.neon.common.log.Log;
@@ -106,7 +105,7 @@ public abstract class AbstractDatabaseModel {
             
             String table_name = DatabaseTableMapping.getMapping(table).name().toUpperCase();
             String where = ( (where_clause==null || where_clause.isEmpty()) ? "" : AbstractDatabaseModel.SQL_WHERE + where_clause );
-            String sql = SQL_SELECT + SQL_PLACEHOLDER_FIELD_LIST + " " + SQL_FROM + table_name + where + SQL_END;
+            String sql = SQL_SELECT + SQL_PLACEHOLDER_FIELD_LIST + " " + SQL_FROM + table_name + " " + where + SQL_END;
             
             Field[] fields_list = table.getDeclaredFields();
             String[] field_names = new String [fields_list.length];
@@ -127,8 +126,17 @@ public abstract class AbstractDatabaseModel {
             while (rs.next()) {
                 T row = table.newInstance();
                 for (Field field : fields_list) {
-                    Object result_value = rs.getObject(field.getName().toUpperCase());
-                    field.set(row, result_value);
+                    String potential_fk_field_name = field.getName().toUpperCase() + DatabaseTableMapping.ID_SUFFIX;
+                    if (AbstractDatabaseModel.class.isAssignableFrom(field.getType()) && (rs.getObject(potential_fk_field_name) instanceof Integer)) {
+                        // FIELD IS FOREIGN KEY
+                        int fkey = rs.getInt(potential_fk_field_name);
+                        Object result_value = DatabaseManager.getSingle(field.getType().asSubclass(AbstractDatabaseModel.class), fkey);
+                        field.set(row, result_value);
+                    } else {
+                        // NORMAL FIELD
+                        Object result_value = rs.getObject(field.getName().toUpperCase());
+                        field.set(row, result_value);
+                    }
                 }
                 result_list.add(row);
             }

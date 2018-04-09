@@ -24,6 +24,9 @@ public enum DatabaseTableMapping {
     PLAYER_MESSAGE(PlayerMessage.class),
 
     ;
+    
+    public static final String ID_SUFFIX = "";
+    public static final String DATETIME_FORMAT = "yyyy-MM-dd hh:mm:ss";
 
     private final Class mapping;
     public final String[] values;

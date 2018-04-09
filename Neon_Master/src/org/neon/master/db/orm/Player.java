@@ -9,9 +9,7 @@ import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import org.neon.master.db.orm.model.AbstractDatabaseModel;
-import java.sql.Date;
 import org.neon.common.log.Log;
-import org.neon.master.db.DatabaseManager;
 
 /**
  *
@@ -24,21 +22,23 @@ public class Player extends AbstractDatabaseModel {
     public String username;
     public String password;
     public String catchphrase_answer;
-    public int catchphrase_question;
+    public Catchphrase catchphrase_question;
     public double color_r;
     public double color_g;
     public double color_b;
-    public int user_icon;
-    public Date last_login_time;
+    public UserIcon user_icon;
+    public String last_login_time;
     
     
     
     public UserIcon getUserIcon () {
-        return DatabaseManager.getSingle(UserIcon.class, user_icon);
+//        return DatabaseManager.getSingle(UserIcon.class, user_icon);
+        return user_icon;
     }
     
     public Catchphrase getCatchphraseQuestion () {
-        return DatabaseManager.getSingle(Catchphrase.class, catchphrase_question);
+//        return DatabaseManager.getSingle(Catchphrase.class, catchphrase_question);
+        return catchphrase_question;
     }
     
     

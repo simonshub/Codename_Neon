@@ -75,11 +75,15 @@ public class DatabaseManager {
     }
     
     public static <T extends AbstractDatabaseModel> T getSingle (Class<T> table, int id) {
-        return getWhere(table, "id="+String.valueOf(id)).get(0);
+        List<T> results = getWhere(table, "id="+String.valueOf(id));
+        if (results.isEmpty()) return null;
+        return results.get(0);
     }
     
     public static <T extends AbstractDatabaseModel> T getSingle (Class<T> table, String where_clause) {
-        return getWhere(table, where_clause).get(0);
+        List<T> results = getWhere(table, where_clause);
+        if (results.isEmpty()) return null;
+        return results.get(0);
     }
     
     public static <T extends AbstractDatabaseModel> List<T> getWhere (Class<T> table, int id) {
